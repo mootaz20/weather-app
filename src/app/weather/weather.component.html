@@ -1,0 +1,57 @@
+<div class="loader-container" *ngIf="isLoading">
+    <div class="loader"></div>
+</div>
+<div class="allContent" *ngIf="!isLoading">
+    <div class="container">
+        <div class="card fw-bold">
+            <img [src]="image()" height="200px" class="card-img-top" alt="error">
+            <div class="card-img-overlay text-light text-center p-5">
+                <h1 class="card-title">{{myWeather.name}}</h1>
+                <h2 class="card-title">{{myWeather.main.temp - 273.15 | number : '1.0-2'}}°</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <img src="{{iconUrl}}" alt="error" height="70px">
+                        </div>
+                    </div>
+                    <div class="paddingDiv">
+                        <div class="backGround">
+                            <div class="row text-center">
+                                <div class="col-md-12">
+                                    <div class="card-body text-light">
+                                        <p class="card-text">{{myWeather.weather[0].description | uppercase}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card-body text-light">
+                                        <p class="card-text">Summary : {{myWeather.weather[0].main}}</p>
+                                        <p class="card-text">Humidity : {{myWeather.main.humidity | percent}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body text-light">
+                                        <p class="card-text">Feels like : {{myWeather.main.feels_like}}°</p>
+                                        <p class="card-text">Pressure :{{myWeather.main.pressure}} hPa</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-3 col-lg-12">
+                                    <div class="card-body text-light">
+                                        <p class="card-text">Wind speed : {{myWeather.wind.speed}} m/s </p>
+                                        <p class="card-text">Wind deg : {{myWeather.wind.deg}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
