@@ -13,7 +13,7 @@ export class HttpService {
 
   getWeather(){
     console.log(this.cityName);
-    return this.http.get('http://api.openweathermap.org/geo/1.0/direct',{params:{
+    return this.http.get('https://api.openweathermap.org/geo/1.0/direct',{params:{
         q: this.cityName,
         limit: 100,
         appid : '13ff98e815543aa6f68a36bc1b8263f9'
