@@ -8,7 +8,6 @@
           </div>
           <div class="form-group">
             <input type="text" required name="stateName" class="fw-bold mt-4 form-control-lg form-control" [(ngModel)]="stateName" placeholder="state Name" id="stateName"/>
-            <p class="text-danger mt-2 fw-bold" *ngIf="!cityName">This field required</p>
           </div>
           <button type="button" routerLink="weather" (click)="onClick()" class="btn p-3 fw-bold mt-4 btn-primary btn-custom">Go to the city weather</button>
         </form>

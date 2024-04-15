@@ -25,6 +25,19 @@
     background-color: rgba(151, 151, 151, 0.268);
     border-radius: 20px;
 }
+.btn-custom {
+    transition: background-color 0.3s;
+    background-color: rgba(58,2,154,1);
+    border-color: #170084;
+}
+.btn-custom:hover {
+      background-color: rgba(58,2,154,1);
+      border-color: rgba(58,2,154,1); 
+  }
+  .btn-custom:active {
+    background-color: #0d005b; 
+    border-color: #0d005b;
+  }
 .loader-container {
     display: flex;
     justify-content: center;
